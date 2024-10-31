@@ -1,0 +1,59 @@
+/* Общие стили для контейнера */
+.custom-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Два столбца */
+  justify-items: center;
+  gap: 20px; /* Расстояние между элементами */
+  max-width: 1372px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрируем контейнер */
+  height: 300px; /* Высота контейнера */
+  padding: 20px;
+  box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+/* Стили для элементов в контейнере */
+.custom-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.custom-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.custom-text {
+  flex: 1;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .custom-container {
+    height: auto;
+    grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+  }
+
+  .custom-item {
+    flex-direction: row; /* Изображение и текст располагаются по вертикали */
+    gap: 20px;
+    align-items: center; /* Центрируем элементы по горизонтали */
+  }
+
+  .custom-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 10px; /* Отступ снизу, чтобы отделить текст от изображения */
+  }
+
+  .custom-text {
+    font-size: 20px;
+  }
+}

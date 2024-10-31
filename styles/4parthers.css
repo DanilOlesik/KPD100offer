@@ -1,0 +1,96 @@
+.partner-section {
+  display: grid;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0 120px 0;
+}
+
+.partner-section-2 {
+      margin-bottom: 60px;
+}
+
+.partner-section .description {
+    display:grid;
+    grid-template-columns:2fr 3fr 1fr;
+  max-width: 1200px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.partner-section .description1 {
+  max-width: 1200px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.partner-section .description span {
+  color: #ff7b25; /* оранжевый цвет для слова "серебряного партнера" */
+}
+
+.description-check {
+    color: #ff7b25;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.description-elements {
+    gap: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+.logos-grid {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.logo-item {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.logo-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Адаптивность для экранов меньше 768px */
+@media (max-width: 768px) {
+  .logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Адаптивность для экранов меньше 480px */
+@media (max-width: 480px) {
+    .partner-section .description {
+    grid-template-columns:1fr 7fr;
+}
+
+  .logos-grid {
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .partner-section {
+    padding: 20px 0 40px 0;
+  }
+
+  .partner-section .description, .partner-section .description1 {
+    font-size: 20px;
+  }
+}
